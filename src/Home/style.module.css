@@ -1,0 +1,77 @@
+.home {
+  text-align: center;
+}
+
+.home-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.link {
+  color: #61dafb;
+}
+
+.typeSelect {
+  display: flex;
+  width: 350px;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.typeOption:nth-child(n + 2) {
+  margin-left: 20px;
+}
+
+.typeOption label {
+  cursor: pointer;
+}
+
+.addTodoInput {
+  width: 300px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 24px;
+  box-sizing: border-box;
+  font-family: PingFang SC;
+  vertical-align: middle;
+}
+.addTodoButton {
+  height: 50px;
+  width: 50px;
+  background-color: #61dafb;
+  border: none;
+  vertical-align: middle;
+}
+
+.todoList {
+  list-style: none;
+}
+.todoListItem {
+  display: flex;
+  width: 400px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todoListItemTag {
+  background-color: #61dafb;
+  font-size: 18px;
+  color: #282c34;
+  border-radius: 2px;
+  padding: 4px;
+}
+
+.todoListItemDeleteIcon {
+  font-size: 24px;
+  width: 30px;
+  height: 30px;
+  line-height: 26px;
+  border-radius: 15px;
+  background-color: #61dafb;
+  cursor: pointer;
+}
