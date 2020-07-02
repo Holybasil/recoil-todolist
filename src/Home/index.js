@@ -1,9 +1,5 @@
 import React from "react";
 import {
-  RecoilRoot,
-  atom,
-  selector,
-  useRecoilState,
   useRecoilValue,
   // getAtomWithKey,
 } from "recoil";

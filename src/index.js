@@ -1,35 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import {
-  RecoilRoot,
-  atom,
-  selector,
-  useRecoilState,
-  useRecoilValue,
-} from "recoil";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
 import "./index.css";
-import Home from "./Home";
-import Todo from "./Todo";
+import App from "./App";
+
 import * as serviceWorker from "./serviceWorker";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <RecoilRoot>
-      <Router>
-        <Switch>
-          <Route path="/todo">
-            <Todo />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
-      </Router>
-    </RecoilRoot>
-  </React.StrictMode>,
-  document.getElementById("root")
-);
+ReactDOM.render(<App></App>, document.getElementById("root"));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

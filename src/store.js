@@ -1,11 +1,4 @@
-import {
-  RecoilRoot,
-  atom,
-  selector,
-  useRecoilState,
-  useRecoilValue,
-  selectorFamily,
-} from "recoil";
+import { atom, selector } from "recoil";
 
 export const todoListTypeState = atom({
   key: "todoListTypeState",
