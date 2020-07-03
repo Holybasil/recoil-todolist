@@ -43,7 +43,7 @@ const Todo = () => {
             checked={todoType === "snack"}
             onChange={(e) => setTodoType(e.target.value)}
           ></input>
-          <label htmlFor="snack">零食</label>
+          <label htmlFor="snack">snack</label>
         </div>
         <div className={styles.typeOption}>
           <input
@@ -54,7 +54,7 @@ const Todo = () => {
             checked={todoType === "drink"}
             onChange={(e) => setTodoType(e.target.value)}
           ></input>
-          <label htmlFor="drink">饮料</label>
+          <label htmlFor="drink">drink</label>
         </div>
       </div>
 

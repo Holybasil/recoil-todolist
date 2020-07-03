@@ -11,7 +11,7 @@ const Home = () => {
   const todoList = useRecoilValue(todoListState);
   return (
     <div className={styles.page}>
-      <p>今日TodoList.</p>
+      <p>Today TodoList</p>
       <ul className={styles.todoList}>
         {todoList.map((item, index) => (
           <li key={index} className={styles.todoListItem}>

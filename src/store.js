@@ -3,13 +3,18 @@ import { atom, selector } from "recoil";
 export const todoListTypeState = atom({
   key: "todoListTypeState",
   default: "snack",
+})
+
+export const todoListTypeListState = atom({
+  key: "todoListTypeListState",
+  default: ["snack", "drink"],
 });
 
 export const todoListState = atom({
   key: "todoListState",
   default: [
-    { type: "snack", content: "趣多多" },
-    { type: "drink", content: "肥宅快乐水" },
+    { type: "snack", content: "🎂 cake" },
+    { type: "drink", content: "🍶 water" },
   ],
 });
 
