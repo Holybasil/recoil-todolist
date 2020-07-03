@@ -29,6 +29,7 @@
   font-size: 20px;
   border-radius: 2px;
   margin-top: calc(2vmin);
+  cursor: pointer;
 }
 
 .typeSelect {
@@ -64,10 +65,11 @@
 
 .todoList {
   list-style: none;
+  padding-inline-start: 0;
 }
 .todoListItem {
   display: flex;
-  width: 400px;
+  width: 350px;
   justify-content: space-between;
   align-items: center;
 }
@@ -88,4 +90,11 @@
   border-radius: 15px;
   background-color: #61dafb;
   cursor: pointer;
+}
+
+.backSnapshotButtonGroup {
+  display: flex;
+}
+.backSnapshotButtonGroup button:nth-child(n + 2) {
+  margin-left: 14px;
 }
