@@ -1,10 +1,13 @@
-.home {
-  text-align: center;
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #282c34;
 }
 
-.home-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.page {
+  text-align: center;
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,6 +18,17 @@
 
 .link {
   color: #61dafb;
+}
+
+.resetButton {
+  height: 50px;
+  width: 180px;
+  background-color: #61dafb;
+  border: none;
+  vertical-align: middle;
+  font-size: 20px;
+  border-radius: 2px;
+  margin-top: calc(2vmin);
 }
 
 .typeSelect {

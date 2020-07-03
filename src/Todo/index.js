@@ -32,77 +32,75 @@ const Todo = () => {
     setTodoList(nextTodoList);
   };
   return (
-    <div className={styles.home}>
-      <header className={styles["home-header"]}>
-        <div className={styles.typeSelect}>
-          <div className={styles.typeOption}>
-            <input
-              type="radio"
-              name="todoType"
-              value="snack"
-              id="snack"
-              checked={todoType === "snack"}
-              onChange={(e) => setTodoType(e.target.value)}
-            ></input>
-            <label htmlFor="snack">零食</label>
-          </div>
-          <div className={styles.typeOption}>
-            <input
-              type="radio"
-              name="todoType"
-              value="drink"
-              id="drink"
-              checked={todoType === "drink"}
-              onChange={(e) => setTodoType(e.target.value)}
-            ></input>
-            <label htmlFor="drink">饮料</label>
-          </div>
-        </div>
-
-        <div className={styles.addTodo}>
+    <div className={styles.page}>
+      <div className={styles.typeSelect}>
+        <div className={styles.typeOption}>
           <input
-            className={styles.addTodoInput}
-            value={todoContent}
-            onKeyDown={(e) => {
-              if (e.key === "Enter") {
-                updateTodoList();
-              }
-            }}
-            onChange={(e) => setTodoContent(e.target.value)}
+            type="radio"
+            name="todoType"
+            value="snack"
+            id="snack"
+            checked={todoType === "snack"}
+            onChange={(e) => setTodoType(e.target.value)}
           ></input>
-          <button
-            className={styles.addTodoButton}
-            onClick={() => {
-              setTodoList([
-                ...todoList,
-                {
-                  type: todoType,
-                  content: todoContent,
-                },
-              ]);
-            }}
-          >
-            +
-          </button>
+          <label htmlFor="snack">零食</label>
         </div>
+        <div className={styles.typeOption}>
+          <input
+            type="radio"
+            name="todoType"
+            value="drink"
+            id="drink"
+            checked={todoType === "drink"}
+            onChange={(e) => setTodoType(e.target.value)}
+          ></input>
+          <label htmlFor="drink">饮料</label>
+        </div>
+      </div>
 
-        <ul className={styles.todoList}>
-          {typedTodoList.map(({ content }) => (
-            <li key={content} className={styles.todoListItem}>
-              {content}
-              <span
-                className={styles.todoListItemDeleteIcon}
-                onClick={() => onDeleteTodoList(content)}
-              >
-                x
-              </span>
-            </li>
-          ))}
-        </ul>
-        <Link to="/" className={styles.link}>
-          &lt;-HOME
-        </Link>
-      </header>
+      <div className={styles.addTodo}>
+        <input
+          className={styles.addTodoInput}
+          value={todoContent}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              updateTodoList();
+            }
+          }}
+          onChange={(e) => setTodoContent(e.target.value)}
+        ></input>
+        <button
+          className={styles.addTodoButton}
+          onClick={() => {
+            setTodoList([
+              ...todoList,
+              {
+                type: todoType,
+                content: todoContent,
+              },
+            ]);
+          }}
+        >
+          +
+        </button>
+      </div>
+
+      <ul className={styles.todoList}>
+        {typedTodoList.map(({ content }) => (
+          <li key={content} className={styles.todoListItem}>
+            {content}
+            <span
+              className={styles.todoListItemDeleteIcon}
+              onClick={() => onDeleteTodoList(content)}
+            >
+              x
+            </span>
+          </li>
+        ))}
+      </ul>
+      <Link to="/" className={styles.link}>
+        &lt;-HOME
+      </Link>
     </div>
   );
 };
